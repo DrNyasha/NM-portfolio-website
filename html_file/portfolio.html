@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Nyasha Manyeruke | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+        }
+        .sidebar {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .sidebar {
+                width: 30%;
+                min-width: 300px;
+                position: sticky;
+                top: 2rem;
+                height: fit-content;
+            }
+        }
+        .main-content {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #f0f2f5;
+        }
+        .social-link {
+            transition: transform 0.2s ease-in-out;
+        }
+        .social-link:hover {
+            transform: translateY(-2px);
+        }
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="container bg-white rounded-3xl p-8 shadow-lg">
+        <!-- Sidebar - Profile Info -->
+        <div class="sidebar flex flex-col items-center p-8 rounded-3xl shadow-md">
+            <!-- Your actual profile picture URL -->
+            <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/profile%20image.jpg" alt="Dr Nyasha Manyeruke" class="profile-photo shadow-lg mb-6">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Dr Nyasha Manyeruke</h1>
+            <p class="text-lg font-medium text-blue-600 mb-4">Medical Doctor & Digital Health Specialist</p>
+            <div class="text-gray-600 text-center mb-6 leading-relaxed">
+                <p>Medical doctor, women's health specialist, and STEM professional applying code to health challenges. Passionate about international health, tropical medicine, healthcare market access, and data analysis.</p>
+                <p class="mt-4">Holds an MSc in International Health and Tropical Medicine from the University of Oxford.</p>
+            </div>
+            
+            <a href="https://share.google/afufZCDzxDMV8IYem" target="_blank" class="w-full text-blue-600 font-semibold mb-2 hover:underline">
+                View My LinkedIn Profile
+            </a>
+            <a href="https://github.com/DrNyasha" target="_blank" class="w-full text-blue-600 font-semibold hover:underline">
+                View My GitHub Profile
+            </a>
+
+            <div class="flex flex-col mt-8 text-center text-gray-500 text-sm">
+                <span>Hosted on GitHub Pages</span>
+                <span>Theme by Gemini</span>
+            </div>
+        </div>
+
+        <!-- Main Content - Portfolio Projects -->
+        <div class="main-content flex-grow p-8 rounded-3xl shadow-md">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Portfolio</h2>
+
+            <!-- Project Section 1: Data Science -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-700 mb-4">Data Science</h3>
+                <div class="project-card">
+                    <p class="text-xl font-semibold text-gray-600">Maternal and Neonatal Health & Malaria PowerBI Dashboards</p>
+                    <p class="text-gray-500">I applied <strong>R programming tools to analyze and visualize complex health data</strong>, providing actionable insights for maternal, neonatal, and malaria-related initiatives. The Maternal and Neonatal Health dashboard, in particular, was created for the <strong>$30 million Beginnings Fund investment in Zimbabwe</strong> and utilized <strong>Bayesian statistics</strong> for more robust analysis. The malaria dashboard was created using <strong>simulation data</strong>.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                        <!-- Maternal and Neonatal Health dashboard image URL -->
+                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/MNH%20dashboard%20(1).png" alt="Maternal and Neonatal Health Dashboard" class="project-image">
+                        <!-- Malaria dashboard image URL -->
+                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/Malaria%20dashboard.png" alt="Malaria Dashboard" class="project-image">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-300 my-8">
+
+            <!-- Project Section 2: Health Informatics & Research -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-gray-700 mb-4">Health Informatics & Research</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="project-card">
+                        <p class="text-xl font-semibold text-gray-600">KPIs Chemotherapy Centres</p>
+                        <p class="text-gray-500">A data analysis project using <strong>R</strong> to evaluate Key Performance Indicators for chemotherapy centers. This included using <strong>Ellicit</strong> and <strong>Ryyan AI</strong> to undertake a rapid scoping review.</p>
+                        <!-- R-generated plot/visualization image URL -->
+                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/5623d61aa7b94f731c943bd78e4865fdb22244c6/Images/map_studies.png" alt="R Analysis Plot" class="project-image">
+                    </div>
+                    <div class="project-card">
+                        <p class="text-xl font-semibold text-gray-600">HLF AI Writing Tools Comparative Analysis</p>
+                        <p class="text-gray-500">A comparative study and analysis of various AI writing tools, built with HTML.</p>
+                        <!-- HLF AI Writing Tools image URL -->
+                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/Screenshot%202025-09-12%20163735.png" alt="AI Writing Tools Page" class="project-image">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-gray-300 my-8">
+
+            <!-- Project Section 3: Other Projects - Split into new categories -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-700 mb-4">Other Notable Projects</h3>
+
+                <!-- MNH Indicator Monitoring -->
+                <div class="mb-8">
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Maternal and Neonatal Health Indicator Monitoring</h4>
+                    <p class="text-gray-500 mb-4">This section highlights the user visualisation interface on the Commcare application.</p>
+                    <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/60a31068175a616c5a22ccec2b0597b7d59b0189/Images/commcare.png" alt="CommCare Data Collection Tool" class="project-image mb-4">
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><span class="font-semibold">Revision of Maternal and Neonatal Health data and equipment tracking collection tools on CommCare</span> - A project focused on revising data collection tools used to collect data from <strong>16 high-burden hospitals in Zimbabwe</strong> currently supported by HLF.</li>
+                        <li><span class="font-semibold">Maternal and Neonatal Health data collection gap analysis</span> - An analysis of gaps in data collection for maternal and neonatal health programs <strong>in Zimbabwe</strong>, highlighting the <strong>use of Artificial Intelligence (Google Gemini) to identify gaps and draft recommended updates</strong>.</li>
+                    </ul>
+                </div>
+
+                <!-- Equipment Tracking -->
+                <div class="mb-8">
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Equipment Tracking</h4>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><span class="font-semibold">Maternal and Neonatal Health equipment catalogue</span> - A digital catalogue of the <strong>1,730 pieces of equipment</strong> donated by HLF to <strong>16 hospitals in Zimbabwe</strong> over a <strong>4-year period</strong>, created to improve tracking and increase the speed of repair and return to the hospital for function.</li>
+                    </ul>
+                </div>
+
+                <!-- Health Economics -->
+                <div>
+                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Health Economics</h4>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li><span class="font-semibold">Maternal and Neonatal Health Costing Zimbabwe</span> - A costing analysis for maternal and neonatal health services specifically for Zimbabwe, using an <strong>ingredient-based costing, bottom-up</strong> approach.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
