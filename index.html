@@ -3,251 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr Nyasha Manyeruke | Portfolio</title>
-    
+    <title>Dr Nyasha Manyeruke | Digital Health Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5;
-            color: #1f2937;
+        body { font-family: 'Inter', sans-serif; background-color: #f0f2f5; color: #1f2937; }
+        .container-custom { max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; }
+        @media (min-width: 1024px) {
+            .container-custom { flex-direction: row; align-items: flex-start; }
+            .sidebar { width: 350px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+            .main-content { flex: 1; padding: 2.5rem; }
         }
-
-        /* Restoring your Original Layout Logic */
-        .container-custom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        @media (min-width: 768px) {
-            .container-custom {
-                flex-direction: row;
-                align-items: flex-start; /* Important for sticky sidebar */
-            }
-            .sidebar {
-                width: 30%;
-                min-width: 300px;
-                position: sticky;
-                top: 2rem;
-                height: fit-content;
-            }
-            .main-content {
-                width: 70%;
-            }
-        }
-
-        .sidebar {
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .main-content {
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #f0f2f5;
-        }
-
-        .project-card {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .project-image {
-            width: 100%;
-            height: auto;
-            border-radius: 0.75rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease-in-out;
-        }
+        .sidebar { background-color: #fff; padding: 2.5rem; border-right: 1px solid #e5e7eb; display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .profile-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #f0f2f5; margin-bottom: 1.5rem; }
         
-        .project-image:hover {
-            transform: scale(1.02);
-        }
-
-        /* Specific Button Style for App Store */
-        .btn-store {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            background: #34A853;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: background 0.2s;
-        }
-        .btn-store:hover {
-            background: #2c8f47;
-        }
+        .project-card { background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; cursor: pointer; border: 1px solid #e5e7eb; }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .hidden-details { display: none; padding: 1rem; border-top: 1px solid #f0f2f5; background: #fafafa; font-size: 0.9rem; line-height: 1.5; text-align: left; }
+        
+        .section-header { border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-top: 3rem; margin-bottom: 2rem; }
     </style>
 </head>
 <body>
 
-    <div class="container-custom">
+<div class="container-custom">
+    <aside class="sidebar">
+        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/profile%20image.jpg" alt="Dr Nyasha Manyeruke" class="profile-photo">
+        <h1 class="text-2xl font-bold text-gray-800">Dr Nyasha Manyeruke</h1>
+        <p class="text-blue-600 font-semibold mb-6">Digital Health Specialist</p>
         
-        <div class="sidebar">
-            <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/profile%20image.jpg" alt="Dr Nyasha Manyeruke" class="profile-photo shadow-lg mb-6">
-            <h1 class="text-3xl font-bold text-gray-800 mb-2">Dr Nyasha Manyeruke</h1>
-            <p class="text-lg font-medium text-blue-600 mb-4">Medical Doctor & Digital Health Specialist</p>
-            
-            <div class="text-gray-600 text-center mb-6 leading-relaxed">
-                <p>Medical doctor, women's health specialist, and STEM professional applying code to health challenges. Passionate about international health, tropical medicine, healthcare market access, and data analysis.</p>
-                <p class="mt-4">Holds an MSc in International Health and Tropical Medicine from the University of Oxford.</p>
-            </div>
-            
-            <a href="https://linkedin.com/in/nyasha-manyeruke" target="_blank" class="w-full text-blue-600 font-semibold mb-2 hover:underline">
-                View My LinkedIn Profile
-            </a>
-            <a href="https://github.com/DrNyasha" target="_blank" class="w-full text-blue-600 font-semibold hover:underline">
-                View My GitHub Profile
-            </a>
+        <div class="text-gray-600 text-sm leading-relaxed space-y-4 text-center">
+            <p>Medical doctor and digital health specialist with experience in international health, spatial analytics, and bridging clinical engagement with digital innovation.</p>
+            <p>Holds an MSc in International Health and Tropical Medicine from the University of Oxford.</p>
+        </div>
 
-            <div class="flex flex-col mt-8 text-center text-gray-500 text-xs">
-                <span>Hosted on GitHub Pages</span>
+        <div class="mt-8 w-full space-y-3">
+            <a href="https://linkedin.com/in/nyasha-manyeruke" target="_blank" class="block text-blue-600 hover:underline font-medium">LinkedIn</a>
+            <a href="https://github.com/DrNyasha" target="_blank" class="block text-blue-600 hover:underline font-medium">GitHub</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <h2 class="text-3xl font-bold mb-8">Project Portfolio</h2>
+        
+        <div class="section-header">
+            <h3 class="text-2xl font-semibold text-gray-700">2026 Projects</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            
+            <div class="project-card relative" onclick="toggleDetails('kassep_shiny')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/kassep_r_shiny.png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">KASSEP R Shiny Dashboard</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Maternal Health Surveillance</p>
+                </div>
+                <div id="kassep_shiny" class="hidden-details">
+                    KASSEP (Kano State Surveillance for Evidence-based Policy) provides real-time maternal health surveillance for Kano State, Nigeria, home to over 16 million people.
+                    <a href="https://github.com/Kdbaba10/kliniq-myEdit.git" class="block mt-2 text-blue-600 underline" target="_blank">View Public Dashboard</a>
+                </div>
+            </div>
+
+            <div class="project-card relative" onclick="toggleDetails('match')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/match_tool.png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">modelling MATCHtool</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Research Automation</p>
+                </div>
+                <div id="match" class="hidden-details">
+                    Designed for The Global Health Network, this tool enables researchers to look up modelling case studies and research, and analyse them using an Ollama chatbot.
+                </div>
+            </div>
+
+            <div class="project-card relative" onclick="toggleDetails('diphtheria')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/diptheria_shiny.png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Diphtheria Geocoding</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Infectious Disease Modeling</p>
+                </div>
+                <div id="diphtheria" class="hidden-details">Spatial analytics for real-time geocoding of the Diphtheria outbreak in Kano, Nigeria, facilitating targeted resource allocation.</div>
+            </div>
+
+            <div class="project-card relative" onclick="toggleDetails('ai_tool')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/kassep_banner.png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Clinical AI Translation</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Linguistic AI</p>
+                </div>
+                <div id="ai_tool" class="hidden-details">
+                    Developing an AI translation tool for medical students and personnel in Kano State to engage meaningfully with the population in the Hausa language.
+                    <a href="https://github.com/Kdbaba10/kliniq-myEdit.git" class="block mt-2 text-blue-600 underline" target="_blank">View Repository</a>
+                </div>
             </div>
         </div>
 
-        <div class="main-content">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 border-b pb-4">Portfolio</h2>
-
-            <div class="mb-12">
-                <h3 class="text-2xl font-bold text-gray-700 mb-4">Data Science</h3>
-                <div class="project-card">
-                    <p class="text-xl font-semibold text-gray-600">Maternal and Neonatal Health & Malaria PowerBI Dashboards</p>
-                    <p class="text-gray-500">I applied <strong>R programming tools to analyze and visualize primary health data from district and provincial hospitals in Zimbabwe</strong>, providing actionable insights for maternal, neonatal, and malaria-related initiatives. The Maternal and Neonatal Health dashboard, in particular, was created for the <strong>$30 million Beginnings Fund investment in Zimbabwe</strong> and utilized <strong>Bayesian statistics</strong> for more robust analysis. The malaria dashboard was created using <strong>simulation data</strong>.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/MNH%20dashboard%20(1).png" alt="Maternal and Neonatal Health Dashboard" class="project-image">
-                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/Malaria%20dashboard.png" alt="Malaria Dashboard" class="project-image">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="border-gray-200 my-8">
-
-            <div class="mb-12">
-                <h3 class="text-2xl font-bold text-gray-700 mb-4">Health Informatics & Research</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="project-card">
-                        <p class="text-xl font-semibold text-gray-600">KPIs Chemotherapy Centres</p>
-                        <p class="text-gray-500">A data analysis project using <strong>R</strong> to evaluate Key Performance Indicators for chemotherapy centers. This included using <strong>Ellicit</strong> and <strong>Ryyan AI</strong> to undertake a rapid scoping review.</p>
-                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/5623d61aa7b94f731c943bd78e4865fdb22244c6/Images/map_studies.png" alt="R Analysis Plot" class="project-image">
-                    </div>
-                    <div class="project-card">
-                        <p class="text-xl font-semibold text-gray-600">HLF AI Writing Tools Comparative Analysis</p>
-                        <p class="text-gray-500">A comparative study and analysis of various AI writing tools, built with HTML.</p>
-                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/Screenshot%202025-09-12%20163735.png" alt="AI Writing Tools Page" class="project-image">
-                    </div>
-                </div>
-            </div>
-
-            <hr class="border-gray-200 my-8">
-
-            <div class="mb-12">
-                <h3 class="text-2xl font-bold text-gray-700 mb-4">Other Notable Projects</h3>
-
-                <div class="mb-8">
-                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Maternal and Neonatal Health Indicator Monitoring</h4>
-                    <p class="text-gray-500 mb-4">This section highlights the user visualisation interface on the Commcare application.</p>
-                    <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/60a31068175a616c5a22ccec2b0597b7d59b0189/Images/commcare.png" alt="CommCare Data Collection Tool" class="project-image mb-4 max-w-lg">
-                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                        <li><span class="font-semibold">Revision of Maternal and Neonatal Health data and equipment tracking collection tools on CommCare</span> - A project focused on revising data collection tools used to collect data from <strong>16 high-burden hospitals in Zimbabwe</strong> currently supported by HLF.</li>
-                        <li><span class="font-semibold">Maternal and Neonatal Health data collection gap analysis</span> - An analysis of gaps in data collection for maternal and neonatal health programs <strong>in Zimbabwe</strong>, highlighting the <strong>use of Artificial Intelligence (Google Gemini) to identify gaps and draft recommended updates</strong>.</li>
-                    </ul>
-                </div>
-
-                <div class="mb-8">
-                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Equipment Tracking</h4>
-                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                        <li><span class="font-semibold">Maternal and Neonatal Health equipment catalogue</span> - A digital catalogue of the <strong>1,730 pieces of equipment</strong> donated by HLF to <strong>16 hospitals in Zimbabwe</strong> over a <strong>4-year period</strong>, created to improve tracking and increase the speed of repair and return to the hospital for function.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-xl font-semibold text-gray-700 mb-2">Health Economics</h4>
-                    
-                    <div class="mt-4 mb-4 p-4 bg-gray-50 rounded-lg border border-gray-200 max-w-xl">
-                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/lost%20opportunity%20scenario_with%20cost.png" alt="Lost Opportunity Scenario Chart from LiST Analysis" class="project-image">
-                        <p class="text-xs text-center text-gray-500 mt-2">Output from the <strong>Lives Saved Tool (LiST)</strong> analysis.</p>
-                    </div>
-
-                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
-                        <li>
-                            <span class="font-semibold">Maternal and Neonatal Health Costing Zimbabwe</span> - A costing analysis for maternal and neonatal health services specifically for Zimbabwe, using an <strong>ingredient-based costing, bottom-up</strong> approach. 
-                            <p class="mt-3 text-sm text-gray-500">The analysis utilized the <strong>LiST (Lives Saved Tool) for modeling</strong>, and the accompanying image represents an output from the tool showing a <strong>lost opportunity scenario with cost implications</strong>.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <hr class="border-gray-200 my-8">
-
-            <div>
-                <h3 class="text-2xl font-bold text-gray-700 mb-6">Mobile Application Development</h3>
-                
-                <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                        <div>
-                            <h2 class="text-2xl font-bold text-gray-800">YouthWyze Health</h2>
-                            <span class="inline-block bg-blue-200 text-blue-800 text-xs font-bold px-2 py-1 rounded mt-1">LAUNCHED 2024</span>
-                        </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.duretechnologies.apps.android.agyw" target="_blank" class="btn-store mt-4 md:mt-0 shadow-md">
-                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" /></svg>
-                            Download on Google Play
-                        </a>
-                    </div>
-
-                    <div class="mb-6 text-gray-700 leading-relaxed">
-                        <p class="mb-2"><strong>YouthWyze</strong> is a free digital platform designed for youth in African countries, providing critical access to health information and services.</p>
-                        
-                        <p>In this project, I contributed significantly to the <strong>medical aspect of the user design</strong>, ensuring that clinical information regarding HIV, STDs, and contraceptives was presented accurately, ethically, and intuitively for the target demographic. I also focused on <strong>platform interaction with users</strong>, designing workflows to facilitate meaningful engagement between users and the digital health services provided.</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/youthwyze_screenshot.png" alt="YouthWyze Screenshot" class="project-image object-cover h-48 w-full bg-white">
-                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/youthwyze_banner_2.png" alt="YouthWyze Banner 2" class="project-image object-cover h-48 w-full bg-white">
-                        <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/youthwyze_banner.png" alt="YouthWyze Banner 1" class="project-image object-cover h-48 w-full bg-white">
-                    </div>
-
-                    <div class="bg-white p-4 rounded-xl border border-blue-100">
-                        <h4 class="font-semibold text-gray-800 mb-3">Key Features:</h4>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600">
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Info on HIV, STDs & Contraceptives</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Gender-based violence resources</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> User Chat Forums</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Health Center Locator</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Barrier Reporting Tools</li>
-                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Real-time Updates</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+        <div class="section-header">
+            <h3 class="text-2xl font-semibold text-gray-700">2025 Projects</h3>
         </div>
-    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            
+            <div class="project-card relative" onclick="toggleDetails('mnh_dash')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/MNH%20dashboard%20(1).png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">MNH & Malaria Dashboards</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Data Visualization</p>
+                </div>
+                <div id="mnh_dash" class="hidden-details">Applied R tools to analyze health data from hospitals in Zimbabwe, providing insights for the $30M Beginnings Fund using Bayesian statistics.</div>
+            </div>
+
+            <div class="project-card relative" onclick="toggleDetails('chemo')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/5623d61aa7b94f731c943bd78e4865fdb22244c6/Images/map_studies.png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Chemotherapy KPIs</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Oncology Data Analysis</p>
+                </div>
+                <div id="chemo" class="hidden-details">Data analysis using R to evaluate KPIs for chemotherapy centers in Seychelles, including a rapid scoping review undertaken with Elicit and Rayyan AI.</div>
+            </div>
+
+            <div class="project-card relative" onclick="toggleDetails('commcare')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/60a31068175a616c5a22ccec2b0597b7d59b0189/Images/commcare.png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">CommCare Monitoring</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Health Informatics</p>
+                </div>
+                <div id="commcare" class="hidden-details">Revision of MNH data collection and equipment tracking tools on CommCare for 16 high-burden hospitals in Zimbabwe.</div>
+            </div>
+
+            <div class="project-card relative" onclick="toggleDetails('costing')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/lost%20opportunity%20scenario_with%20cost.png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">MNH Costing (LiST Tool)</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Health Economics</p>
+                </div>
+                <div id="costing" class="hidden-details">Ingredient-based costing analysis for maternal and neonatal health in Zimbabwe using the Lives Saved Tool (LiST).</div>
+            </div>
+
+            <div class="project-card relative" onclick="toggleDetails('ai_writing')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/Screenshot%202025-09-12%20163735.png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">AI Writing Tools Analysis</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">AI Research</p>
+                </div>
+                <div id="ai_writing" class="hidden-details">Comparative analysis of AI writing tools and their utility in clinical research documentation.</div>
+            </div>
+
+            <div class="project-card relative" onclick="toggleDetails('equip')">
+                <div class="w-full h-48 bg-slate-200 flex items-center justify-center text-slate-400 font-bold">Equipment Catalogue</div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Equipment Catalogue</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Health Logistics</p>
+                </div>
+                <div id="equip" class="hidden-details">Digital tracking for 1,730 pieces of donated medical equipment donated to 16 hospitals in Zimbabwe over a 4-year period.</div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h3 class="text-2xl font-semibold text-gray-700">2024 Projects</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+            <div class="project-card relative" onclick="toggleDetails('youthwyze')">
+                <img src="https://raw.githubusercontent.com/DrNyasha/NM-portfolio-website/main/Images/youthwyze_screenshot.png" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">YouthWyze Health</h3>
+                    <p class="text-xs text-blue-600 font-bold uppercase mt-1">Mobile Health</p>
+                </div>
+                <div id="youthwyze" class="hidden-details">
+                    Digital platform providing young people with access to reproductive and youth-friendly health services.
+                    <a href="https://play.google.com/store/apps/details?id=com.duretechnologies.apps.android.agyw" class="block mt-2 text-blue-600 underline" target="_blank">View on Google Play</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script>
+    function toggleDetails(id) {
+        const detailRow = document.getElementById(id);
+        const allDetails = document.querySelectorAll('.hidden-details');
+        allDetails.forEach(detail => {
+            if (detail.id !== id) detail.style.display = 'none';
+        });
+        detailRow.style.display = (detailRow.style.display === 'block') ? 'none' : 'block';
+    }
+</script>
+
 </body>
 </html>
